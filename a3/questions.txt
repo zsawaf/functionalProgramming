@@ -1,0 +1,13 @@
+1) Fun is not a type of Expr, therefore Expr as a given cannot be described in terms of fun.
+
+2) We can fix this problem by making Fun of type Expr. (see 3)
+
+3) 
+
+datatype NewExpr = Const of int
+| Var of Name
+| Neg of Expr
+| Plus of Expr * Expr
+| Mult of Expr * Expr
+| App of Expr * Expr
+| Def of Name * Expr;

@@ -1,0 +1,39 @@
+
+
+         CSC324 -- Winter 2013 -- Assignment 1
+
+         Last Name:         _________SAWAF______________________
+
+         First Name:        _________ZAFER______________________
+
+         Student number:    _________997752383______________________
+
+         CDF ID:            _________G1SAWAF______________________
+
+ I have read and understood the course policy on collaboration.  All
+ answers are my own, written in isolation, without help from others.
+ This submission is in accordance with the University of Toronto Code
+ of Behavior on Academic Matters.
+
+
+         Signature  ___zafer____________________   Date __24/1/2013__________
+
+
+         Question 1                                    ____ / 70
+
+            (a) swap13                               ____ /  8
+            (b) deep-swap13                          ____ / 12
+            (c) mem?                                 ____ /  8
+            (d) deep-mem?                            ____ / 12
+            (e) prime-factors                        ____ / 15
+            (f) count-distinct-factors               ____ / 15
+
+         Question 2                                    ____ / 20
+
+         [-1,-2] per each non-thoroughly tested function
+
+         Documentation and Coding Style                ____ / 10
+
+         Total                                        _____ / 100
+
+         Additional Marker's comments:

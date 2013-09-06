@@ -1,0 +1,6 @@
+validPath([]).
+validPath(Path):-
+  
+
+findLast([]).
+findLast(SubPath):-

@@ -1,0 +1,2 @@
+myappend([], _, Y).
+myappend([H1|T1], [H2|T2], [

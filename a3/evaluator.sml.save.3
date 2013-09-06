@@ -1,0 +1,28 @@
+
+type Name = string;
+
+datatype Expr = Const of int
+| Var of Name
+| Neg of Expr
+| Plus of Expr * Expr
+| Mult of Expr * Expr
+| App of Fun * Expr
+and Fun = Def of Name * Expr;
+
+(* Given a tuple of 3 elements: (name (of type string), expr1 (of type Expr), expr2 (of type Expr) 
+* substitute every occurance of name in expr2 with expr1. *)
+
+fun	substitute(n:Name, e1, (Const e2)) = (Const e2)
+|	substitute(n:Name, (Var e1), (Var e2)) = if (Var n) = (Var e2) then (Var e1) else (Var e2)
+|	substitute(n:Name, e1, (Neg e2)) = Neg(substitute(n, e1, e2))
+|	substitute(n:Name, e1, (Plus (expr1, expr2))) = Plus(substitute(n, e1, expr1), substitute(n, e1, expr2))
+|	substitute(n:Name, e1, (Mult (expr1, expr2))) = Mult(substitute(n, e1, expr1), substitute(n, e1, expr2))
+|	substitute(n:Name, e1, (App (f, e2))) = App(f, substitute(n, e1, e2))
+|	substitute((Def (n:Name, e1)), e2) = Def(substitute(n, e1, e2));
+
+fun	eval(Const e1) = e1
+|	eval(Neg e1) = ~(eval e1)
+|	eval(Plus (e1, e2)) = (eval e1) + (eval e2)
+|	eval(Mult (e1, e2)) = (eval e1) * (eval e2);
+
+
